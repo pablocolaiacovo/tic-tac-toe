@@ -41,7 +41,18 @@ const Game = (props) => {
     const desc = move ? `Go to move #${move}` : "Go to game start";
     return (
       <li key={move}>
-        <button onClick={() => jumpTo(move)}>{desc}</button>
+        <button
+          onClick={() => jumpTo(move)}
+          style={{
+            color: "#069",
+            cursor: "pointer",
+            background: "none",
+            textDecoration: "underline",
+            border: "0 none",
+          }}
+        >
+          {desc}
+        </button>
       </li>
     );
   });
